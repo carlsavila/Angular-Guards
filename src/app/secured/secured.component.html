@@ -1,0 +1,12 @@
+<p>secured works!</p>
+
+<ul>
+    <li *ngIf="authSvc.isAuthenticated()" style="color: green;">
+        <label>connected</label>
+    </li>
+    @if (authSvc.isAuthenticated()) {
+    <li>
+        <button (click)="exit()">Exit</button>
+    </li>
+    }
+</ul>

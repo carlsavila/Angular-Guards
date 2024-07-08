@@ -1,0 +1,19 @@
+<p>notsecured works!</p>
+
+<ul>
+    <li *ngIf="authSvc.isAuthenticated()" style="color: green;">
+        Connected
+    </li>
+        @if (authSvc.isAuthenticated()) {
+    <li>
+        <a routerLink="/secured">To secured</a>
+    </li>
+    <li>
+        <button (click)="authSvc.logout()">logout</button>
+    </li>
+    } @else {
+    <li>
+        <button (click)="authSvc.login()">login</button>
+    </li>
+    }
+</ul>

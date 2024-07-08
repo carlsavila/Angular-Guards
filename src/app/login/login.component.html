@@ -1,0 +1,18 @@
+<p>login works!</p>
+<ul>
+    <li *ngIf="authSrv.isAuthenticated()" style="color: green;">Connected</li>
+    <li *ngIf="!authSrv.isAuthenticated()" style="color: red;">Disconnected</li>
+    @if (authSrv.isAuthenticated()) {
+    <li>
+        <a routerLink="/secured">To secured</a>
+    </li>
+    <li>
+        <button (click)="authSrv.logout">logout</button>
+    </li>
+    } @else {
+    <li>
+        <button (click)="authSrv.login()">login</button>
+    </li>
+    }
+
+</ul>
